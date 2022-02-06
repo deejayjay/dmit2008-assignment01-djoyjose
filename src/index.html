@@ -39,20 +39,47 @@
           <div class="main-sidebar">
             <nav>
               <ul>
-                <li><a href="#">Categories</a></li>
-                <li><a href="#">Brands</a></li>
-                <li><a href="#">Coming Soon</a></li>
-                <li><a href="#">Deals</a></li>
-                <li><a href="#">Clearance</a></li>
+                <li>
+                  <a href="#">
+                    <i class="fas fa-list"></i>
+                    Categories
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fas fa-cube"></i>
+                    Brands
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fas fa-shipping-fast"></i>
+                    Coming Soon
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    Deals
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fas fa-coins"></i>
+                    Clearance
+                  </a>
+                </li>
               </ul>
             </nav>
           </div>
           <div class="main-right">
-            <h2 class="main-title">Dashboard</h2>
-            <button class="btn-add-toy">
-              Add Toy
-              <i class="fas fa-plus-square"></i>
-            </button>
+            <div class="main-title__wrapper">
+              <h2 class="main-title">Dashboard</h2>
+              <a class="btn-add-toy">
+                Add Toy
+                <i class="fas fa-plus-square"></i>
+              </a>
+            </div>
             <div class="toys-cards__container">
               <section class="toys-card">
                 <div class="toys-card__top">
@@ -65,7 +92,7 @@
                     <p class="toy-price">$9.99</p>
                   </div>
                 </div>
-                <button class="btn-add-to-cart">
+                <button class="btn-add-to-cart" data-key="">
                   <i class="fas fa-cart-plus"></i>
                   Add to Cart
                 </button>
@@ -73,7 +100,7 @@
               <section class="toys-card">
                 <div class="toys-card__top">
                   <div class="toy-image__wrapper">
-                    <img src="static/images/toy-2.webp" alt="A picture of Toy 1" class="toy-image" />
+                    <img src="static/images/toy-2.webp" alt="A picture of Toy 2" class="toy-image" />
                   </div>
                   <div class="toy-info__wrapper">
                     <h3 class="toy-title">Toy 2</h3>
@@ -81,7 +108,7 @@
                     <p class="toy-price">$9.99</p>
                   </div>
                 </div>
-                <button class="btn-add-to-cart">
+                <button class="btn-add-to-cart" data-key="">
                   <i class="fas fa-cart-plus"></i>
                   Add to Cart
                 </button>
@@ -89,7 +116,7 @@
               <section class="toys-card">
                 <div class="toys-card__top">
                   <div class="toy-image__wrapper">
-                    <img src="static/images/toy-3.webp" alt="A picture of Toy 1" class="toy-image" />
+                    <img src="static/images/toy-3.webp" alt="A picture of Toy 3" class="toy-image" />
                   </div>
                   <div class="toy-info__wrapper">
                     <h3 class="toy-title">Toy 3</h3>
@@ -97,7 +124,7 @@
                     <p class="toy-price">$9.99</p>
                   </div>
                 </div>
-                <button class="btn-add-to-cart">
+                <button class="btn-add-to-cart" data-key="">
                   <i class="fas fa-cart-plus"></i>
                   Add to Cart
                 </button>
@@ -105,7 +132,7 @@
               <section class="toys-card">
                 <div class="toys-card__top">
                   <div class="toy-image__wrapper">
-                    <img src="static/images/toy-4.webp" alt="A picture of Toy 1" class="toy-image" />
+                    <img src="static/images/toy-4.webp" alt="A picture of Toy 4" class="toy-image" />
                   </div>
                   <div class="toy-info__wrapper">
                     <h3 class="toy-title">Toy 4</h3>
@@ -113,7 +140,7 @@
                     <p class="toy-price">$9.99</p>
                   </div>
                 </div>
-                <button class="btn-add-to-cart">
+                <button class="btn-add-to-cart" data-key="">
                   <i class="fas fa-cart-plus"></i>
                   Add to Cart
                 </button>
@@ -121,7 +148,7 @@
               <section class="toys-card">
                 <div class="toys-card__top">
                   <div class="toy-image__wrapper">
-                    <img src="static/images/toy-5.webp" alt="A picture of Toy 1" class="toy-image" />
+                    <img src="static/images/toy-5.webp" alt="A picture of Toy 5" class="toy-image" />
                   </div>
                   <div class="toy-info__wrapper">
                     <h3 class="toy-title">Toy 5</h3>
@@ -129,7 +156,7 @@
                     <p class="toy-price">$9.99</p>
                   </div>
                 </div>
-                <button class="btn-add-to-cart">
+                <button class="btn-add-to-cart" data-key="">
                   <i class="fas fa-cart-plus"></i>
                   Add to Cart
                 </button>
@@ -137,7 +164,7 @@
               <section class="toys-card">
                 <div class="toys-card__top">
                   <div class="toy-image__wrapper">
-                    <img src="static/images/toy-6.webp" alt="A picture of Toy 1" class="toy-image" />
+                    <img src="static/images/toy-6.webp" alt="A picture of Toy 6" class="toy-image" />
                   </div>
                   <div class="toy-info__wrapper">
                     <h3 class="toy-title">Toy 6</h3>
@@ -145,7 +172,39 @@
                     <p class="toy-price">$9.99</p>
                   </div>
                 </div>
-                <button class="btn-add-to-cart">
+                <button class="btn-add-to-cart" data-key="">
+                  <i class="fas fa-cart-plus"></i>
+                  Add to Cart
+                </button>
+              </section>
+              <section class="toys-card">
+                <div class="toys-card__top">
+                  <div class="toy-image__wrapper">
+                    <img src="static/images/toy-7.webp" alt="A picture of Toy 7" class="toy-image" />
+                  </div>
+                  <div class="toy-info__wrapper">
+                    <h3 class="toy-title">Toy 7</h3>
+                    <p class="toy-age-group">5 - 7 year olds</p>
+                    <p class="toy-price">$9.99</p>
+                  </div>
+                </div>
+                <button class="btn-add-to-cart" data-key="">
+                  <i class="fas fa-cart-plus"></i>
+                  Add to Cart
+                </button>
+              </section>
+              <section class="toys-card">
+                <div class="toys-card__top">
+                  <div class="toy-image__wrapper">
+                    <img src="static/images/toy-8.webp" alt="A picture of Toy 8" class="toy-image" />
+                  </div>
+                  <div class="toy-info__wrapper">
+                    <h3 class="toy-title">Toy 8</h3>
+                    <p class="toy-age-group">5 - 7 year olds</p>
+                    <p class="toy-price">$9.99</p>
+                  </div>
+                </div>
+                <button class="btn-add-to-cart" data-key="">
                   <i class="fas fa-cart-plus"></i>
                   Add to Cart
                 </button>
@@ -157,7 +216,7 @@
       <footer>
         <section class="footer-content__container">
           <h3 class="sr-only">Copy right information</h3>
-          <p>Copyright &copy; 2022. For educational purposes only</p>
+          <p>Copyright &copy; 2022. Created by Deepak Joy Jose.</p>
         </section>
       </footer>
     </div>

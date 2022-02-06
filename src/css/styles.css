@@ -445,6 +445,7 @@ header {
   z-index: 99;
   width: 100%;
   background-color: #ffffff;
+  box-shadow: 0 0 10px 0 #5a5a5a;
 }
 
 main {
@@ -456,7 +457,6 @@ main {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 1rem;
-  box-shadow: 0 0 10px 0 #5a5a5a;
 }
 
 .header-title__wrapper {
@@ -493,7 +493,7 @@ main {
 .togglebtn-menu {
   font-size: 1.5rem;
   margin-top: 0.6875rem;
-  color: #ecad0d;
+  color: #333333;
 }
 .togglebtn-menu:hover {
   cursor: pointer;
@@ -514,11 +514,20 @@ main {
   background-color: #ffffff;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.25s ease-in;
+  transition: max-height 0.3s ease-in;
+}
+.main-sidebar i {
+  width: 1.5rem;
+  margin-right: 1rem;
 }
 
 .main-sidebar li {
   padding: 0.5rem 1rem;
+  transition: all 0.3s ease-in;
+}
+.main-sidebar li:hover {
+  cursor: pointer;
+  background-color: #ecad0d;
 }
 
 .main-sidebar li > a {
@@ -528,12 +537,13 @@ main {
   text-decoration: none;
 }
 
-.main-sidebar li:not(li:last-of-type) {
+.main-sidebar li {
   border-bottom: 1px solid #d3d3d3;
 }
 
 .main-sidebar li:last-of-type {
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: none;
 }
 
 .active-sidebar {
@@ -546,8 +556,8 @@ main {
 .main-title {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #333333;
   margin-bottom: 1rem;
+  color: #5a5a5a;
 }
 
 .btn-add-toy {
@@ -559,9 +569,11 @@ main {
   border-radius: 5px;
   padding: 0.5rem;
   font-size: 1.125rem;
+  text-align: center;
 }
 .btn-add-toy:hover {
   cursor: pointer;
+  background-color: #64a64ecc;
 }
 
 .btn-add-toy > i {
@@ -577,6 +589,7 @@ main {
   box-shadow: 0 0 10px 2px #b1b1b1;
   border-radius: 8px;
   margin-bottom: 1rem;
+  color: #5a5a5a;
 }
 
 .toys-card__top {
@@ -618,6 +631,7 @@ main {
 }
 .btn-add-to-cart:hover {
   cursor: pointer;
+  background-color: #edae0cb3;
 }
 
 .btn-add-to-cart > i {
@@ -629,6 +643,78 @@ footer {
   padding: 1.5rem;
   display: flex;
   justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-title__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .main-title {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+  }
+
+  .btn-add-toy {
+    width: 10rem;
+  }
+
+  .toys-cards__container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(20rem, 1fr));
+    gap: 1rem;
+  }
+  .toys-cards__container .toys-card {
+    margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .header-container__appbar,
+.main-container__wrapper,
+.footer-content__container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .togglebtn-menu {
+    display: none;
+  }
+
+  .main-container__wrapper {
+    display: flex;
+  }
+
+  .main-sidebar {
+    position: static;
+    max-width: 15rem;
+    max-height: none;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    margin-right: 1rem;
+    margin-top: 4rem;
+    border-right: 1px solid #5a5a5a;
+  }
+  .main-sidebar li {
+    border-bottom: 1px solid #ffffff;
+  }
+  .main-sidebar li:last-of-type {
+    padding-bottom: 0.5rem;
+  }
+  .main-sidebar li:hover {
+    background-color: #ffffff;
+    border-bottom: 1px solid #5a5a5a;
+  }
+  .main-sidebar i {
+    width: 1rem;
+    margin-right: 0.5rem;
+  }
+
+  .toys-cards__container {
+    grid-template-columns: repeat(3, minmax(20rem, 1fr));
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
