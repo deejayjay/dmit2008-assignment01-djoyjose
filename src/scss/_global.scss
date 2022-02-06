@@ -3,7 +3,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  color: $dark-grey;
+  color: $grey;
 }
 
 /* Hiding class, making content visible only to screen readers but not visually */
@@ -45,6 +45,7 @@ main {
 .header-container__appbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0.5rem 1rem;
 }
 
@@ -80,13 +81,16 @@ main {
 }
 
 .togglebtn-menu {
-  font-size: 1.5rem;
-  margin-top: 0.6875rem;
+  font-size: 1.875rem;
   color: $dark-grey;
 
   &:hover {
     cursor: pointer;
   }
+}
+
+.user-icon {
+  display: none;
 }
 
 .main-container__wrapper {
@@ -163,6 +167,7 @@ main {
   padding: 0.5rem;
   font-size: 1.125rem;
   text-align: center;
+  color: $dark-grey !important;
 
   &:hover {
     cursor: pointer;
@@ -277,6 +282,11 @@ footer {
 
   .togglebtn-menu {
     display: none;
+  }
+
+  .user-icon {
+    display: inline-block;
+    font-size: 1.875rem;
   }
 
   .main-container__wrapper {
