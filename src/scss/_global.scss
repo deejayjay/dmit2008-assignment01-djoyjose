@@ -159,14 +159,13 @@ main {
   color: $grey;
 }
 
-.btn-add-toy {
+.btn-global {
   display: block;
   width: 100%;
-  background-color: $green;
   outline: none;
   border: none;
   border-radius: 5px;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   font-size: 1.125rem;
   text-align: center;
   color: $dark-grey !important;
@@ -174,12 +173,35 @@ main {
   &:hover {
     cursor: pointer;
     text-decoration: none;
+  }
+
+  i {
+    margin-right: 0.5rem;
+  }
+}
+
+.btn-global--green {
+  background-color: $green;
+
+  &:hover {
     background-color: $green-80;
   }
 }
 
-.btn-add-toy > i {
-  margin-right: 0.6125rem;
+.btn-global--gold {
+  background-color: $gold;
+
+  &:hover {
+    background-color: $gold-70;
+  }
+}
+
+.btn-global--grey {
+  background-color: $light-grey;
+
+  &:hover {
+    background-color: $lighter-grey;
+  }
 }
 
 .toys-cards__container {
@@ -248,18 +270,7 @@ main {
 .btn-add-to-cart {
   display: block;
   width: 100%;
-  background-color: $gold;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  padding: 0.5rem;
-  font-size: 1.125rem;
   text-transform: uppercase;
-
-  &:hover {
-    cursor: pointer;
-    background-color: $gold-70;
-  }
 }
 
 .btn-add-to-cart > i {
@@ -285,10 +296,9 @@ footer {
     font-size: 1.5rem;
   }
 
-  .btn-add-toy {
+  .btn-global {
     width: auto;
     display: inline-block;
-    padding: 0.5rem 1rem;
   }
 
   .toys-cards__container {
@@ -298,6 +308,10 @@ footer {
 
     .toys-card {
       margin-bottom: 0;
+
+      .btn-add-to-cart {
+        width: 100%;
+      }
     }
   }
 }

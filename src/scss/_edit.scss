@@ -1,15 +1,15 @@
 @use "./colors" as *;
 
 .main-container__wrapper {
-  .add-main-right {
+  .edit-main-right {
     width: 100%;
   }
 }
 
-.form-add-toy__container {
+.form-edit-toy__container {
   margin: 1.5rem 0;
 
-  .add-new-toy {
+  .edit-existing-toy {
     .form-control {
       margin-bottom: 1.5rem;
 
@@ -53,29 +53,14 @@
           object-fit: contain;
         }
       }
-
-      .toy-image__label {
-        color: $dark-grey;
-
-        i {
-          margin-right: 0.5rem;
-        }
-      }
-    }
-
-    .btn-add-new-toy {
-      i {
-        margin-right: 0.5rem;
-      }
     }
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .form-add-toy__container {
+  .form-edit-toy__container {
     margin-top: 3rem;
-
-    .add-new-toy {
+    .edit-existing-toy {
       display: grid;
       grid-template-columns: 1fr 2fr;
       gap: 2rem;
@@ -93,7 +78,7 @@
         margin-top: 1.75rem;
       }
 
-      .btn-add-new-toy {
+      .btn-edit-save {
         margin-left: auto;
         display: block;
       }
@@ -102,7 +87,7 @@
 }
 
 @media only screen and (min-width: 1280px) {
-  .form-add-toy__container {
+  .form-edit-toy__container {
     max-width: 40rem;
     margin: 3rem auto 1.5rem;
   }
