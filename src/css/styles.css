@@ -411,52 +411,224 @@ body {
   background-color: #fff;
 }
 
-.content-page-app-bar {
-  padding: 1rem;
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #333333;
+}
+
+/* Hiding class, making content visible only to screen readers but not visually */
+/* "sr" meaning "screen-reader" */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+main {
+  flex: 1;
+  margin-top: 61px;
+}
+
+.header-container__appbar {
   display: flex;
   justify-content: space-between;
-  box-shadow: 0 0 5px 0 #9ca3af;
-  background-color: white;
-}
-.content-page-app-bar div {
-  gap: 0.25rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.content-page-app-bar div img {
-  width: 28px;
-}
-.content-page-app-bar div h2 {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0 10px 0 #5a5a5a;
 }
 
-.crudy {
-  padding: 0.5rem;
-  margin: 1rem auto 0;
-  max-width: 420px;
+.header-title__wrapper {
+  font-size: 0;
 }
-.crudy header {
+
+.header-logo__wrapper {
+  display: flex;
+}
+
+.header-logo {
+  width: 2rem;
+  margin-left: -5px;
+}
+
+.header-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+.header-title--pink {
+  color: #ff635c;
+}
+
+.header-title--green {
+  color: #64a64e;
+}
+
+.header-title--blue {
+  color: #4992ec;
+}
+
+.togglebtn-menu {
+  font-size: 1.5rem;
+  margin-top: 0.6875rem;
+  color: #ecad0d;
+}
+.togglebtn-menu:hover {
+  cursor: pointer;
+}
+
+.main-container__wrapper {
+  padding: 1rem;
+}
+
+.main-sidebar {
+  position: absolute;
+  top: 61px;
+  left: 0;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #ffffff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease-in;
+}
+
+.main-sidebar li {
+  padding: 0.5rem 1rem;
+}
+
+.main-sidebar li > a {
+  color: #5a5a5a;
+}
+.main-sidebar li > a:hover {
+  text-decoration: none;
+}
+
+.main-sidebar li:not(li:last-of-type) {
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.main-sidebar li:last-of-type {
+  padding-bottom: 1rem;
+}
+
+.active-sidebar {
+  border-top: 3px solid #ecad0d;
+  border-bottom: 1px solid #ecad0d;
+  max-height: 100vh;
+  z-index: 99;
+}
+
+.main-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333333;
   margin-bottom: 1rem;
 }
-.crudy h2 {
-  text-align: center;
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: #dc2626;
+
+.btn-add-toy {
+  display: block;
+  width: 100%;
+  background-color: #64a64e;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 1.125rem;
+}
+.btn-add-toy:hover {
+  cursor: pointer;
 }
 
-.crud-control {
-  display: flex;
-  gap: 0.35rem;
+.btn-add-toy > i {
+  margin-left: 0.6125rem;
 }
-.crud-control button {
-  text-align: center;
-  padding: 0 0.5rem;
-  margin: 0;
-  background-color: #f4f4f5;
+
+.toys-cards__container {
+  margin-top: 1rem;
+}
+
+.toys-card {
+  padding: 1rem;
+  box-shadow: 0 0 10px 2px #b1b1b1;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.toys-card__top {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.toy-image__wrapper {
+  width: 35%;
+  box-shadow: 0 0 10px 0 #b1b1b1;
+  margin-right: 1rem;
+}
+
+.toy-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.toy-age-group {
+  margin-bottom: 1.25rem;
+}
+
+.toy-price {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.btn-add-to-cart {
+  display: block;
+  width: 100%;
+  background-color: #ecad0d;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+}
+.btn-add-to-cart:hover {
+  cursor: pointer;
+}
+
+.btn-add-to-cart > i {
+  margin-right: 0.5rem;
+}
+
+footer {
+  background-color: #b1b1b1;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

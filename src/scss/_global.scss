@@ -1,0 +1,225 @@
+// This document contains the styles that are global to all pages
+@use "./colors" as *;
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: $dark-grey;
+}
+
+/* Hiding class, making content visible only to screen readers but not visually */
+/* "sr" meaning "screen-reader" */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  background-color: $white;
+}
+
+main {
+  flex: 1;
+  margin-top: 61px;
+}
+
+.header-container__appbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0 10px 0 $grey;
+}
+
+.header-title__wrapper {
+  font-size: 0;
+}
+
+.header-logo__wrapper {
+  display: flex;
+}
+
+.header-logo {
+  width: 2rem;
+  margin-left: -5px;
+}
+
+.header-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+.header-title--pink {
+  color: $pink;
+}
+
+.header-title--green {
+  color: $green;
+}
+
+.header-title--blue {
+  color: $blue;
+}
+
+.togglebtn-menu {
+  font-size: 1.5rem;
+  margin-top: 0.6875rem;
+  color: $gold;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.main-container__wrapper {
+  padding: 1rem;
+}
+
+.main-sidebar {
+  position: absolute;
+  top: 61px;
+  left: 0;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: $white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease-in;
+}
+
+.main-sidebar li {
+  padding: 0.5rem 1rem;
+}
+
+.main-sidebar li > a {
+  color: $grey;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.main-sidebar li:not(li:last-of-type) {
+  border-bottom: 1px solid $lighter-grey;
+}
+
+.main-sidebar li:last-of-type {
+  padding-bottom: 1rem;
+}
+
+.active-sidebar {
+  border-top: 3px solid $gold;
+  border-bottom: 1px solid $gold;
+  max-height: 100vh;
+  z-index: 99;
+}
+
+.main-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: $dark-grey;
+  margin-bottom: 1rem;
+}
+
+.btn-add-toy {
+  display: block;
+  width: 100%;
+  background-color: $green;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 1.125rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-add-toy > i {
+  margin-left: 0.6125rem;
+}
+
+.toys-cards__container {
+  margin-top: 1rem;
+}
+
+.toys-card {
+  padding: 1rem;
+  box-shadow: 0 0 10px 2px $light-grey;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.toys-card__top {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.toy-image__wrapper {
+  width: 35%;
+  box-shadow: 0 0 10px 0 $light-grey;
+  margin-right: 1rem;
+}
+
+.toy-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.toy-age-group {
+  margin-bottom: 1.25rem;
+}
+
+.toy-price {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.btn-add-to-cart {
+  display: block;
+  width: 100%;
+  background-color: $gold;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-add-to-cart > i {
+  margin-right: 0.5rem;
+}
+
+footer {
+  background-color: $light-grey;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+}

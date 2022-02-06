@@ -9,16 +9,157 @@
     <meta name="author" content="Deepak Joy Jose | deejayjay@zoho.com | deejayjay on GitHub" />
     <meta name="description" content="This page is the dashboard of ToysWonderLand" />
 
+    <!-- Import Fonts, Icon library etc. -->
+    <script src="https://kit.fontawesome.com/a0058dad5f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+
     <!-- User Styles -->
     <link rel="stylesheet" href="css/styles.css" />
+    <script type="module" src="js/index.js"></script>
   </head>
   <body>
-    <header>
-      <h1>ToysWonderLand - Dashboard</h1>
-      <a href="update.html">Update</a>
-      <a href="add.html">Add</a>
-    </header>
-    <main></main>
-    <footer></footer>
+    <div class="container">
+      <header>
+        <div class="header-container__appbar">
+          <div class="header-logo__wrapper">
+            <img src="static/svg/branding/toyswonderland-logo.svg" alt="ToysWonderLand logo" class="header-logo" />
+            <h1 class="header-title__wrapper">
+              <span class="header-title header-title--pink">Toys</span>
+              <span class="header-title header-title--green">Wonder</span>
+              <span class="header-title header-title--blue">Land</span>
+            </h1>
+          </div>
+          <i class="fas fa-bars togglebtn-menu"></i>
+        </div>
+      </header>
+      <main>
+        <section class="main-container__wrapper">
+          <div class="main-sidebar">
+            <nav>
+              <ul>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Brands</a></li>
+                <li><a href="#">Coming Soon</a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="#">Clearance</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="main-right">
+            <h2 class="main-title">Dashboard</h2>
+            <button class="btn-add-toy">
+              Add Toy
+              <i class="fas fa-plus-square"></i>
+            </button>
+            <div class="toys-cards__container">
+              <section class="toys-card">
+                <div class="toys-card__top">
+                  <div class="toy-image__wrapper">
+                    <img src="static/images/toy-1.webp" alt="A picture of Toy 1" class="toy-image" />
+                  </div>
+                  <div class="toy-info__wrapper">
+                    <h3 class="toy-title">Toy 1</h3>
+                    <p class="toy-age-group">5 - 7 year olds</p>
+                    <p class="toy-price">$9.99</p>
+                  </div>
+                </div>
+                <button class="btn-add-to-cart">
+                  <i class="fas fa-cart-plus"></i>
+                  Add to Cart
+                </button>
+              </section>
+              <section class="toys-card">
+                <div class="toys-card__top">
+                  <div class="toy-image__wrapper">
+                    <img src="static/images/toy-2.webp" alt="A picture of Toy 1" class="toy-image" />
+                  </div>
+                  <div class="toy-info__wrapper">
+                    <h3 class="toy-title">Toy 2</h3>
+                    <p class="toy-age-group">5 - 7 year olds</p>
+                    <p class="toy-price">$9.99</p>
+                  </div>
+                </div>
+                <button class="btn-add-to-cart">
+                  <i class="fas fa-cart-plus"></i>
+                  Add to Cart
+                </button>
+              </section>
+              <section class="toys-card">
+                <div class="toys-card__top">
+                  <div class="toy-image__wrapper">
+                    <img src="static/images/toy-3.webp" alt="A picture of Toy 1" class="toy-image" />
+                  </div>
+                  <div class="toy-info__wrapper">
+                    <h3 class="toy-title">Toy 3</h3>
+                    <p class="toy-age-group">5 - 7 year olds</p>
+                    <p class="toy-price">$9.99</p>
+                  </div>
+                </div>
+                <button class="btn-add-to-cart">
+                  <i class="fas fa-cart-plus"></i>
+                  Add to Cart
+                </button>
+              </section>
+              <section class="toys-card">
+                <div class="toys-card__top">
+                  <div class="toy-image__wrapper">
+                    <img src="static/images/toy-4.webp" alt="A picture of Toy 1" class="toy-image" />
+                  </div>
+                  <div class="toy-info__wrapper">
+                    <h3 class="toy-title">Toy 4</h3>
+                    <p class="toy-age-group">5 - 7 year olds</p>
+                    <p class="toy-price">$9.99</p>
+                  </div>
+                </div>
+                <button class="btn-add-to-cart">
+                  <i class="fas fa-cart-plus"></i>
+                  Add to Cart
+                </button>
+              </section>
+              <section class="toys-card">
+                <div class="toys-card__top">
+                  <div class="toy-image__wrapper">
+                    <img src="static/images/toy-5.webp" alt="A picture of Toy 1" class="toy-image" />
+                  </div>
+                  <div class="toy-info__wrapper">
+                    <h3 class="toy-title">Toy 5</h3>
+                    <p class="toy-age-group">5 - 7 year olds</p>
+                    <p class="toy-price">$9.99</p>
+                  </div>
+                </div>
+                <button class="btn-add-to-cart">
+                  <i class="fas fa-cart-plus"></i>
+                  Add to Cart
+                </button>
+              </section>
+              <section class="toys-card">
+                <div class="toys-card__top">
+                  <div class="toy-image__wrapper">
+                    <img src="static/images/toy-6.webp" alt="A picture of Toy 1" class="toy-image" />
+                  </div>
+                  <div class="toy-info__wrapper">
+                    <h3 class="toy-title">Toy 6</h3>
+                    <p class="toy-age-group">5 - 7 year olds</p>
+                    <p class="toy-price">$9.99</p>
+                  </div>
+                </div>
+                <button class="btn-add-to-cart">
+                  <i class="fas fa-cart-plus"></i>
+                  Add to Cart
+                </button>
+              </section>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <section class="footer-content__container">
+          <h3 class="sr-only">Copy right information</h3>
+          <p>Copyright &copy; 2022. For educational purposes only</p>
+        </section>
+      </footer>
+    </div>
   </body>
 </html>
