@@ -177,7 +177,7 @@ main {
 }
 
 .btn-add-toy > i {
-  margin-left: 0.6125rem;
+  margin-right: 0.6125rem;
 }
 
 .toys-cards__container {
@@ -284,7 +284,9 @@ footer {
   }
 
   .btn-add-toy {
-    width: 10rem;
+    width: auto;
+    display: inline-block;
+    padding: 0.5rem 1rem;
   }
 
   .toys-cards__container {
