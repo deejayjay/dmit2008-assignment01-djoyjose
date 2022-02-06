@@ -74,7 +74,7 @@
               </ul>
             </nav>
           </div>
-          <div class="main-right">
+          <div class="main-right app-main-right">
             <div class="main-title__wrapper">
               <h2 class="main-title">Add new toy</h2>
               <a href="./index.html" class="btn-add-toy">
@@ -84,7 +84,7 @@
             </div>
             <div class="form-add-toy__container">
               <form id="addToyForm" class="add-new-toy">
-                <div class="form-control">
+                <div class="form-control new-toy-image__wrapper">
                   <div class="toy-image__display">
                     <img src="static/images/toy-1.webp" alt="Image of the new toy" />
                   </div>
@@ -94,17 +94,20 @@
                   </label>
                   <input type="file" id="newToyImage" class="hidden" accept=".jpg, .png, .jpeg, .webp" />
                 </div>
-                <div class="form-control">
-                  <label for="toyName">Toy name</label>
-                  <input type="text" id="toyName" placeholder="Teddy bear" />
-                </div>
-                <div class="form-control">
-                  <label for="toyAgeGroup">Age group</label>
-                  <input type="text" id="toyAgeGroup" placeholder="5 - 7" />
-                </div>
-                <div class="form-control">
-                  <label for="toyPrice">Price</label>
-                  <input type="number" id="toyPrice" placeholder="9.99" step="0.01" min="0" />
+                <div class="new-toy-info__wrapper">
+                  <div class="form-control">
+                    <label for="toyName">Toy name</label>
+                    <input type="text" id="toyName" placeholder="Teddy bear" required />
+                  </div>
+                  <div class="form-control">
+                    <label for="toyAgeGroup">Age group</label>
+                    <input type="text" id="toyAgeGroup" placeholder="5 - 7" required />
+                  </div>
+                  <div class="form-control">
+                    <label for="toyPrice">Price</label>
+                    <input type="number" id="toyPrice" placeholder="9.99" step="0.01" min="0" required />
+                  </div>
+                  <button type="submit" class="btn-add-toy">Add Toy</button>
                 </div>
               </form>
             </div>

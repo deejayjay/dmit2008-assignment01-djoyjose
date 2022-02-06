@@ -95,6 +95,7 @@ main {
 
 .main-container__wrapper {
   padding: 1rem;
+  background-color: $white;
 }
 
 .main-sidebar {
@@ -109,6 +110,8 @@ main {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in;
+  border-top: 3px solid $white;
+  border-bottom: 1px solid $white;
 
   i {
     width: 1.5rem;
@@ -144,8 +147,7 @@ main {
 }
 
 .active-sidebar {
-  border-top: 3px solid $gold;
-  border-bottom: 1px solid $gold;
+  border-color: $gold;
   max-height: 100vh;
   z-index: 99;
 }

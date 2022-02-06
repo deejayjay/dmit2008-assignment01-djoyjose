@@ -1,63 +1,116 @@
 @use "./colors" as *;
 
+.main-container__wrapper {
+  .app-main-right {
+    width: 100%;
+  }
+}
+
 .form-add-toy__container {
-  margin-top: 1.5rem;
+  margin: 1.5rem 0;
 
-  .form-control {
-    margin-bottom: 1.5rem;
+  .add-new-toy {
+    .form-control {
+      margin-bottom: 1.5rem;
 
-    label {
-      display: block;
-    }
-
-    input {
-      width: 100%;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      outline: none;
-      border: none;
-      box-shadow: 0 0 2px 0 $grey;
-      color: $grey;
-
-      &:hover,
-      &:focus {
-        box-shadow: 0 0 4px 0 $blue;
+      label {
+        display: block;
       }
-    }
 
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-    input[type="number"] {
-      -moz-appearance: textfield;
-    }
-
-    .toy-image__display {
-      box-shadow: 0 0 1px 1px #d6d3d1;
-      border: 6px solid white;
-      border-radius: 5px;
-      margin-bottom: 1rem;
-
-      img {
+      input {
         width: 100%;
-        height: 15rem;
-        object-fit: contain;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        box-shadow: 0 0 2px 0 $grey;
+        color: $grey;
+
+        &:hover,
+        &:focus {
+          box-shadow: 0 0 4px 0 $blue;
+        }
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+
+      .toy-image__display {
+        box-shadow: 0 0 1px 1px #d6d3d1;
+        border: 6px solid white;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+
+        img {
+          width: 100%;
+          height: 15rem;
+          object-fit: contain;
+        }
+      }
+
+      .toy-image__label {
+        background-color: $light-grey;
+        padding: 0.5rem;
+        border-radius: 5px;
+        color: $dark-grey;
+        text-align: center;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $lighter-grey;
+        }
       }
     }
+  }
 
-    .toy-image__label {
-      background-color: $gold;
-      padding: 0.5rem;
-      border-radius: 5px;
-      color: $dark-grey;
-      text-align: center;
+  .btn-add-toy {
+    background-color: $gold;
 
-      &:hover {
-        cursor: pointer;
-        background-color: $gold-70;
+    &:hover {
+      cursor: pointer;
+      background-color: $gold-70;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .form-add-toy__container {
+    margin-top: 3rem;
+    .add-new-toy {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+
+      .form-control {
+        .toy-image__display {
+          img {
+            height: 13.5rem;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .new-toy-image__wrapper {
+        margin-top: 1.75rem;
+      }
+
+      .btn-add-toy {
+        margin-left: auto;
+        display: block;
       }
     }
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .form-add-toy__container {
+    max-width: 40rem;
+    margin: 3rem auto 1.5rem;
   }
 }
