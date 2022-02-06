@@ -578,6 +578,7 @@ main {
 }
 .btn-add-toy:hover {
   cursor: pointer;
+  text-decoration: none;
   background-color: #64a64ecc;
 }
 
@@ -595,6 +596,26 @@ main {
   border-radius: 8px;
   margin-bottom: 1rem;
   color: #5a5a5a;
+  position: relative;
+}
+
+.toys-actions {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+.toys-actions i {
+  display: none;
+}
+.toys-actions i:first-of-type {
+  margin-right: 0.5rem;
+}
+
+.toys-card:hover i {
+  display: inline-block;
+}
+.toys-card:hover i:hover {
+  cursor: pointer;
 }
 
 .toys-card__top {

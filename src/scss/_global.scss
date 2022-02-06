@@ -171,6 +171,7 @@ main {
 
   &:hover {
     cursor: pointer;
+    text-decoration: none;
     background-color: $green-80;
   }
 }
@@ -189,6 +190,31 @@ main {
   border-radius: 8px;
   margin-bottom: 1rem;
   color: $grey;
+  position: relative;
+}
+
+.toys-actions {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+
+  i {
+    display: none;
+  }
+
+  i:first-of-type {
+    margin-right: 0.5rem;
+  }
+}
+
+.toys-card:hover {
+  i {
+    display: inline-block;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 .toys-card__top {
