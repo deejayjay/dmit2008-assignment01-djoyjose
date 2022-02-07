@@ -2,7 +2,6 @@
   "name": "toys-wonder-land",
   "version": "1.0.0",
   "description": "This package is created to satisfy the requirements of DMIT2008-Assignment01",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx parcel src/index.html"

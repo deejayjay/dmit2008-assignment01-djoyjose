@@ -19,7 +19,7 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .container {
@@ -204,6 +204,14 @@ main {
   }
 }
 
+.btn-global--red {
+  background-color: $red;
+
+  &:hover {
+    background-color: $red-70;
+  }
+}
+
 .toys-cards__container {
   margin-top: 1rem;
 }
@@ -220,7 +228,7 @@ main {
 .toys-actions {
   position: absolute;
   top: 0.5rem;
-  right: 0.5rem;
+  left: 0.5rem;
 
   i {
     display: none;

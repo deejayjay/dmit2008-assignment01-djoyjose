@@ -37,7 +37,7 @@ function onAddNewToy(e) {
 // Save the toy info to firebase
 async function saveNewToyInfo(title, ageGroup, price, image) {
   // Path to the toys info on firebase Realtime Database
-  const dataRef = dbRef(db, "toys");
+  const dataRef = dbRef(db, "toys/");
 
   // Generate a firebase unique key for the new toy info
   const itemRef = await push(dataRef);
