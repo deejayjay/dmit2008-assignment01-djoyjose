@@ -33,10 +33,11 @@ function addCardControls(toyCard) {
 }
 
 function onEditToyInfo(e) {
-  const key = e.target.dataset.key;
-  console.log({ key });
-  // sessionStorage.setItem("key", key);
-  // window.location.assign("edit.html");
+  // Storge the item key to session
+  sessionStorage.setItem("key", e.target.dataset.key);
+
+  // Now, load the edit page
+  window.location.assign("edit.html");
 }
 
 function onDeleteToyInfo(e) {

@@ -30,6 +30,7 @@ function onMenuButtonClick() {
   document.querySelector(".main-sidebar").classList.toggle("active-sidebar");
 }
 
+// Once we have got the confirmation, its time to delete the toy info
 async function onConfirmDelete(e) {
   // Retrieve the item key from session
   const key = sessionStorage.getItem("key");
@@ -65,6 +66,7 @@ async function onConfirmDelete(e) {
   }
 }
 
+// If cancelled the delete, hide the Confirm Delete Modal box
 function onConfirmCancel(e) {
   // Clear the item key from session
   sessionStorage.removeItem("key");
