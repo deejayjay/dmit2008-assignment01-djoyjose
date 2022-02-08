@@ -628,11 +628,12 @@ main {
 
 .toys-actions {
   position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
+  top: 1rem;
+  left: 1rem;
 }
 .toys-actions i {
   display: none;
+  font-size: 1.25rem;
 }
 .toys-actions i:first-of-type {
   margin-right: 0.5rem;
@@ -736,11 +737,12 @@ footer {
 
   .main-container__wrapper {
     display: flex;
+    margin-top: 2rem;
   }
 
   .main-sidebar {
     position: static;
-    max-width: 15rem;
+    max-width: 10rem;
     max-height: none;
     font-weight: 400;
     font-family: "Roboto", sans-serif;
@@ -766,6 +768,12 @@ footer {
 
   .toys-cards__container {
     grid-template-columns: repeat(3, minmax(20rem, 1fr));
+  }
+
+  .toy-image__wrapper,
+.toy-info__wrapper {
+    flex: 1 1 0;
+    min-width: 0;
   }
 }
 .confirm-delete__overlay {
