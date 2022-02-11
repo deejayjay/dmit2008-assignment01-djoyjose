@@ -11,6 +11,8 @@ let toyRef, existingToyInfo;
 const editForm = document.forms["editToyForm"];
 const uploadImage = document.getElementById("uploadImage");
 const inputToyImage = document.getElementById("inputToyImage");
+const lblSuccess = document.getElementById("lblAddSuccess");
+const lblFailure = document.getElementById("lblAddFailed");
 
 // Attach event listeners
 editForm.addEventListener("submit", onSaveChanges);
@@ -73,13 +75,12 @@ async function updateToyInfo() {
     .then(() => {
       // Once the update is successful, remove the key from session
       sessionStorage.removeItem("key");
-      setTimeout(goBackToDashboard, 3000);
+      lblSuccess.style.display = "block"; // Display success status message
     })
-    .catch(err => console.log(`Unexpected error occurred while updating existing toy information: ${err.message}`));
-}
-
-function goBackToDashboard() {
-  window.location.assign("index.html");
+    .catch((err) => {
+      lblFailure.style.display = "block"; // Display failed status message
+      console.log(`Unexpected error occurred while updating existing toy information: ${err.message}`);
+    });
 }
 
 // Save the changes to firebase
@@ -94,4 +95,11 @@ function onSaveChanges(e) {
 function onSelectedImageChanges(e) {
   const file = e.target.files[0];
   uploadImage.src = URL.createObjectURL(file);
+}
+
+lblSuccess.addEventListener("click", closeStatusMessage);
+lblFailure.addEventListener("click", closeStatusMessage);
+
+function closeStatusMessage(e) {
+  e.currentTarget.remove();
 }

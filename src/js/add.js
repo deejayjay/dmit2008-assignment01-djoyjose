@@ -4,6 +4,8 @@ import { ref as storageRef, uploadBytes, getDownloadURL } from "firebase/storage
 import { db, storage } from "./libs/firebase/firebaseConfig";
 
 const inputNewToyImage = document.getElementById("newToyImage");
+const lblSuccess = document.getElementById("lblAddSuccess");
+const lblFailure = document.getElementById("lblAddFailed");
 
 // Attach event listeners
 document.querySelector(".togglebtn-menu").addEventListener("click", onMenuButtonClick);
@@ -60,6 +62,18 @@ async function saveNewToyInfo(title, ageGroup, price, image) {
     price,
     ageGroup
   })
-    .then(() => window.location.assign("index.html"))
-    .catch(err => console.log(`Unexpected error occurred while saving new toy info: ${err.message}`));
+    .then(() => {
+      lblSuccess.style.display = "block";
+    })
+    .catch((err) => {
+      lblFailure.style.display = "block";
+      console.log(`Unexpected error occurred while saving new toy info: ${err.message}`);
+    });
+}
+
+lblSuccess.addEventListener("click", closeStatusMessage);
+lblFailure.addEventListener("click", closeStatusMessage);
+
+function closeStatusMessage(e) {
+  e.currentTarget.remove();
 }

@@ -16,7 +16,7 @@ async function pageInit() {
 
   if (toysSnapShot.exists()) {
     const toysInfo = toysSnapShot.val();
-    Object.values(toysInfo).map(toy => {
+    Object.values(toysInfo).map((toy) => {
       const toyCard = getToyCard(toy);
       document.getElementById("toyCardsContainer").append(toyCard);
     });
@@ -60,9 +60,9 @@ async function onConfirmDelete(e) {
             // Hide the Confirm Delete modal window
             e.target.closest(".confirm-delete__overlay").classList.add("hidden");
           })
-          .catch(err => console.log(`Unexpected error occurred while deleting toy info: ${err.message}`));
+          .catch((err) => console.log(`Unexpected error occurred while deleting toy info: ${err.message}`));
       })
-      .catch(err => console.log(`Unexpected error occurred while deleting toy image: ${err.message}`));
+      .catch((err) => console.log(`Unexpected error occurred while deleting toy image: ${err.message}`));
   }
 }
 

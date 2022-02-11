@@ -293,6 +293,29 @@ footer {
   justify-content: center;
 }
 
+.lbl-status {
+  color: $white;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  border-radius: 5px;
+  position: relative;
+
+  i {
+    position: absolute;
+    right: 1rem;
+    top: 0.6125rem;
+  }
+}
+
+.label-status--green {
+  background-color: $status-green;
+}
+
+.label-status--red {
+  background-color: $status-red;
+}
+
 @media only screen and (min-width: 768px) {
   .main-title__wrapper {
     display: flex;
