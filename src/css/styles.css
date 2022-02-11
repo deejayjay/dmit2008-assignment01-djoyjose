@@ -8,6 +8,7 @@
 *,
 *::before,
 *::after {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -36,6 +37,7 @@ section {
 }
 
 hr {
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
   overflow: visible;
@@ -63,8 +65,7 @@ abbr[data-original-title] {
   text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
 }
 
 address {
@@ -250,6 +251,7 @@ button::-moz-focus-inner,
 
 input[type=radio],
 input[type=checkbox] {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
@@ -420,8 +422,7 @@ body {
 /* "sr" meaning "screen-reader" */
 .sr-only:not(:focus):not(:active) {
   clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -887,8 +888,7 @@ footer {
 .form-add-toy__container .add-new-toy .form-control .toy-image__display img {
   width: 100%;
   height: 15rem;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .form-add-toy__container .add-new-toy .form-control .toy-image__label {
   color: #333333;
@@ -911,8 +911,7 @@ footer {
   }
   .form-add-toy__container .add-new-toy .form-control .toy-image__display img {
     height: 13.5rem;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .form-add-toy__container .add-new-toy .new-toy-image__wrapper {
     margin-top: 1.75rem;
@@ -970,8 +969,7 @@ footer {
 .form-edit-toy__container .edit-existing-toy .form-control .toy-image__display img {
   width: 100%;
   height: 15rem;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 @media only screen and (min-width: 768px) {
@@ -985,8 +983,7 @@ footer {
   }
   .form-edit-toy__container .edit-existing-toy .form-control .toy-image__display img {
     height: 13.5rem;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .form-edit-toy__container .edit-existing-toy .new-toy-image__wrapper {
     margin-top: 1.75rem;
