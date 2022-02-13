@@ -6,6 +6,7 @@ import { db, storage } from "./libs/firebase/firebaseConfig";
 const inputNewToyImage = document.getElementById("newToyImage");
 const lblSuccess = document.getElementById("lblAddSuccess");
 const lblFailure = document.getElementById("lblAddFailed");
+const toolTip = document.getElementById("toolTipToyImage");
 
 // Attach event listeners
 document.querySelector(".togglebtn-menu").addEventListener("click", onMenuButtonClick);
@@ -19,6 +20,7 @@ function onMenuButtonClick() {
 
 // Displays the selected image when a toy image is selected
 function onToyImageSelected(e) {
+  toolTip.style.display = "none";
   const file = e.target.files[0];
   document.querySelector(".toy-image__display > img").src = URL.createObjectURL(file);
 }
@@ -31,9 +33,13 @@ function onAddNewToy(e) {
   const toyTitle = document.getElementById("toyName").value.trim();
   const ageGroup = document.getElementById("toyAgeGroup").value.trim();
   const price = document.getElementById("toyPrice").value.trim();
-  const toyImage = inputNewToyImage.files[0];
 
-  saveNewToyInfo(toyTitle, ageGroup, price, toyImage);
+  if (inputNewToyImage.files.length > 0) {
+    const toyImage = inputNewToyImage.files[0];
+    saveNewToyInfo(toyTitle, ageGroup, price, toyImage);
+  } else {
+    toolTip.style.display = "inline";
+  }
 }
 
 // Save the toy info to firebase
