@@ -5,13 +5,13 @@ import { db, storage } from "./libs/firebase/firebaseConfig";
 import { getToyCard } from "./templates/toyCards";
 import getNoToysMessage from "./templates/noToysMessage";
 
-document.querySelector(".togglebtn-menu").addEventListener("click", onMenuButtonClick);
-document.querySelector(".btn-delete-confirm").addEventListener("click", onConfirmDelete);
-document.querySelector(".btn-delete-cancel").addEventListener("click", onConfirmCancel);
-
 pageInit();
 
 async function pageInit() {
+  document.querySelector(".togglebtn-menu").addEventListener("click", onMenuButtonClick);
+  document.querySelector(".btn-delete-confirm").addEventListener("click", onConfirmDelete);
+  document.querySelector(".btn-delete-cancel").addEventListener("click", onConfirmCancel);
+
   const dataRef = dbRef(db, "toys/");
   const toysSnapShot = await get(dataRef);
 

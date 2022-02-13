@@ -14,13 +14,14 @@ const inputToyImage = document.getElementById("inputToyImage");
 const lblSuccess = document.getElementById("lblAddSuccess");
 const lblFailure = document.getElementById("lblAddFailed");
 
-// Attach event listeners
-editForm.addEventListener("submit", onSaveChanges);
-inputToyImage.addEventListener("change", onSelectedImageChanges);
-
 pageInit();
 
 async function pageInit() {
+  // Attach event listeners
+  editForm.addEventListener("submit", onSaveChanges);
+  inputToyImage.addEventListener("change", onSelectedImageChanges);
+  document.querySelector(".togglebtn-menu").addEventListener("click", onMenuButtonClick);
+
   // Retrieve the toy info from firebase
   toyRef = databaseRef(db, `toys/${key}`);
   const toySnapShot = await get(toyRef);
@@ -30,6 +31,11 @@ async function pageInit() {
     existingToyInfo = toySnapShot.val();
     populateExistingToyInfo(existingToyInfo);
   }
+}
+
+// Toggles menu when the menu button is clicked
+function onMenuButtonClick() {
+  document.querySelector(".main-sidebar").classList.toggle("active-sidebar");
 }
 
 // Add, add the toy info to the form fields
