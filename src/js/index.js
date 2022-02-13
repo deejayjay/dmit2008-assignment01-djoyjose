@@ -3,6 +3,7 @@ import { ref as dbRef, get, remove } from "firebase/database";
 import { ref as storageRef, deleteObject } from "firebase/storage";
 import { db, storage } from "./libs/firebase/firebaseConfig";
 import { getToyCard } from "./templates/toyCards";
+import getNoToysMessage from "./templates/noToysMessage";
 
 document.querySelector(".togglebtn-menu").addEventListener("click", onMenuButtonClick);
 document.querySelector(".btn-delete-confirm").addEventListener("click", onConfirmDelete);
@@ -21,6 +22,8 @@ async function pageInit() {
       document.getElementById("toyCardsContainer").append(toyCard);
     });
   } else {
+    const noToyMessage = getNoToysMessage();
+    document.querySelector(".main-right").append(noToyMessage);
     console.log("No toy info available!!!");
   }
 }
