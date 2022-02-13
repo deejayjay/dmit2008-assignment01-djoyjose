@@ -468,6 +468,9 @@ main {
 .header-logo__wrapper {
   display: flex;
 }
+.header-logo__wrapper:hover {
+  text-decoration: none;
+}
 
 .header-logo {
   width: 2rem;

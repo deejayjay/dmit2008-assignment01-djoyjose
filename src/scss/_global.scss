@@ -55,6 +55,10 @@ main {
 
 .header-logo__wrapper {
   display: flex;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .header-logo {
